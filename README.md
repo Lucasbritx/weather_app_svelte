@@ -2,24 +2,15 @@
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
+## About the project
+It's a simple weather project to the user see your location temperature or you can search around the world using the input component.
+
 ## Live project demo
 https://weather-app-svelte-three.vercel.app/
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've cloned the project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
@@ -30,12 +21,6 @@ npm run dev -- --open
 
 ## Building
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
+To create a production version of your app you just need to push a new commit to this repo.
 
 You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
