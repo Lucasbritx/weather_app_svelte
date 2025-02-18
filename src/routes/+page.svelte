@@ -1,5 +1,4 @@
 <script>
-    import { WEATHER_API_KEY } from "$env/static/private";
     import { onMount } from "svelte";
     let filter = "";
     let weatherData = {
@@ -20,17 +19,13 @@
     };
     let errorMessage = "";
 
-    const apiKey = WEATHER_API_KEY;
-
     async function fetchWeather() {
         if (!filter) {
             errorMessage = "Por favor, insira uma localização válida.";
             return;
         }
         try {
-            const response = await fetch(
-                `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${filter}&aqi=yes`,
-            );
+            const response = await fetch(`/api/weather?q=${filter}`);
 
             if (!response.ok) {
                 throw new Error(
