@@ -1,4 +1,5 @@
 <script>
+    import { WEATHER_API_KEY } from "$env/static/private";
     import { onMount } from "svelte";
     let filter = "";
     let weatherData = {
@@ -19,8 +20,7 @@
     };
     let errorMessage = "";
 
-    // TODO create env
-    const apiKey = "";
+    const apiKey = WEATHER_API_KEY;
 
     async function fetchWeather() {
         if (!filter) {
