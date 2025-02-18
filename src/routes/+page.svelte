@@ -42,8 +42,10 @@
     }
 </script>
 
-<main class="p-4">
-    <h1 class="text-xl mb-4">Previsão do Tempo</h1>
+<main
+    class="p-4 bg-gradient-to-r from-blue-500 to-blue-900 h-screen"
+>
+    <h1 class="text-xl mb-4 text-white">Previsão do Tempo</h1>
 
     <!-- Input e botão -->
     <div class="flex gap-2 mb-4">
@@ -51,7 +53,7 @@
             type="text"
             placeholder="Digite uma localização"
             bind:value={filter}
-            class="border p-2 rounded w-full"
+            class="border p-2 rounded w-full bg-white"
         />
         <button
             on:click={fetchWeather}
@@ -86,8 +88,4 @@
 
 <style lang="postcss">
     @reference "tailwindcss/theme";
-    main {
-        max-width: 600px;
-        margin: 0 auto;
-    }
 </style>
