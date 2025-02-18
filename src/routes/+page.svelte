@@ -84,7 +84,8 @@
     {/if}
 </main>
 
-<style>
+<style lang="postcss">
+    @reference "tailwindcss/theme";
     main {
         max-width: 600px;
         margin: 0 auto;
