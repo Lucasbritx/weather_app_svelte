@@ -2,8 +2,11 @@ import { WEATHER_API_KEY } from '$env/static/private';
 
 /** @type {import('../$types').RequestHandler} */
 export async function GET({ url }) {
-    // TODO add latLong on or q
-    const filter = url.searchParams.get('q') || '';
+    const locationQuery = url.searchParams.get('q') || '';
+    const lat = url.searchParams.get('lat') || '';
+    const lon = url.searchParams.get('lon') || '';
+
+    const filter = locationQuery || `${lat},${lon}`;
 
     const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${WEATHER_API_KEY}&q=${filter}&aqi=yes`;
 
